@@ -1,0 +1,81 @@
+$general-color: #41B8CC;
+$font-size: 2em;
+$font-title: 2.4em;
+$font-size-small-desc: .7em;
+$font-size-input: 2em;
+$border-radius: 24px;
+.parent {
+    height: 100vh;
+    display: grid;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-card {
+    padding: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-shadow: 4px 0px 20px 20px #0000003e;
+    border-radius: $border-radius;
+    background-color: rgba(255, 255, 255, 0.897);
+}
+
+.title {
+    font-size: $font-title;
+}
+
+.bg-container {
+    height: 100%;
+}
+
+.bg-img {
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    align-self: center;
+}
+
+.highlight {
+    color: $general-color;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.font-desc-1 {
+    font-size: .6em;
+    padding-top: -3.4rem;
+}
+
+.input-spacing {
+    margin-top: 4rem;
+}
+
+.input-spacing-sm {
+    margin-top: 1.3rem;
+}
+
+.btn-sign-up {
+    border-style: none;
+    border-radius: $border-radius;
+    transition: .3s ease-in-out;
+    font-size: .6em;
+    padding-bottom: .4rem;
+    padding-top: .4rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-top: 2rem;
+    &:hover {
+        background-color: #41B8CC;
+        color: white;
+        box-shadow: 0px 4px 8px 4px #0000003e;
+    }
+}

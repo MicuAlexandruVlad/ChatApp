@@ -1,0 +1,8 @@
+.parent {
+  height: 100vh;
+  display: flex;
+  background-color: white;
+  font-family: "Crimson Text", serif;
+  align-items: center;
+  justify-content: center;
+}

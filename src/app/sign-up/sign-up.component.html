@@ -1,1 +1,26 @@
-<p>sign-up works!</p>
+<div class="bg-container">
+    <img class="bg-img" src="../../assets/signup-bg.png">
+</div>
+<div class="parent">
+    <div style="z-index: 4" class="center-card title">
+        <p class="highlight"><b>Sign Up</b></p>
+        <p class="font-desc-1">Create your account in a few simple steps</p>
+
+        <div class="input-field input-spacing">
+            <input [(ngModel)]="email" style="font-size: 20px;" id="email" type="email" class="validate input-font">
+            <label for="email">Email</label>
+        </div>
+
+        <div class="input-field input-spacing-sm">
+            <input [(ngModel)]="email" style="font-size: 20px;" id="pass" type="password" class="validate input-font">
+            <label for="pass">Password</label>
+        </div>
+
+        <div class="input-field input-spacing-sm">
+            <input [(ngModel)]="email" style="font-size: 20px;" id="repeat-pass" type="password" class="validate input-font">
+            <label for="repeat-pass">Repeat password</label>
+        </div>
+
+        <button class="btn-sign-up">Sign Up</button>
+    </div>
+</div>

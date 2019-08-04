@@ -1,0 +1,122 @@
+$general-color: #41B8CC;
+$font-size: 2rem;
+$font-size-small-desc: .7em;
+$font-size-input: 2em;
+$border-radius: 24px;
+.parent {
+    height: 100vh;
+    display: flex;
+    background-color: white;
+    font-family: 'Crimson Text', serif;
+}
+
+.highlight {
+    color: $general-color;
+}
+
+.column {
+    margin-top: 66px;
+    width: 100%;
+    display: flex;
+    font-size: $font-size;
+    flex-direction: column;
+}
+
+.col-left {
+    box-shadow: 4px 0px 20px 20px #0000003e;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    z-index: 4;
+    min-width: 40%;
+}
+
+.col-right {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-top: 4rem;
+}
+
+.small-desc-1 {
+    font-size: $font-size-small-desc;
+    margin-top: 1.2rem;
+}
+
+.resize-img {
+    width: 100%;
+    height: 100%;
+    min-width: 30%;
+    min-height: 30%;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+}
+
+.input-spacing {
+    margin-top: 3rem;
+    font-size: 1.4em;
+}
+
+.input-font {
+    font-size: $font-size-input;
+}
+
+.login-btn {
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: $font-size-small-desc;
+    color: $general-color;
+    border-style: none;
+    transition: .4s ease-in-out;
+    background-color: #4D3847;
+    &:hover {
+        box-shadow: 4px 8px 12px 4px #0000003e;
+    }
+    &:active,
+    &:focus {
+        outline: 0;
+        border: none;
+    }
+}
+
+.login-container {
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.forgot-pass {
+    font-size: $font-size-small-desc;
+    color: $general-color;
+    display: inline-block;
+    align-self: center;
+    cursor: pointer;
+    text-decoration: none;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $general-color;
+        transition: width .3s;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.bottom-div {
+    margin-top: auto;
+    margin-bottom: 1em;
+}
+
+.font-standard {
+    font-size: .7em;
+    margin-top: auto;
+    margin-bottom: 0em;
+}
+
+.pointer {
+    cursor: pointer;
+}

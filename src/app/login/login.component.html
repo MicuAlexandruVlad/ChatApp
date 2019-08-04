@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="parent">
+    <div class="column col-left">
+        <img class="resize-img" src="../../assets/login_placeholder.jpg">
+    </div>
+    <div class="column col-right">
+        <p>Welcome to <span class="highlight"><b>ChatApp</b></span></p>
+        <p class="small-desc-1">We make it easier for you to connect with others.</p>
+
+        <div class="input-field input-spacing">
+            <input [(ngModel)]="email" style="font-size: 30px;" id="email" type="email" class="validate input-font">
+            <label for="email">Email</label>
+        </div>
+
+        <div class="input-field input-spacing">
+            <input [(ngModel)]="password" style="font-size: 30px;" id="password" type="password" class="validate input-font">
+            <label for="password">Password</label>
+        </div>
+
+        <div class="login-container">
+            <button (click)="authenticateUser()" class="login-btn"><b>Login</b></button>
+            <span class="forgot-pass">Forgot password ?</span>
+        </div>
+
+        <div class="bottom-div">
+            <span class="font-standard">Don't have an account ? 
+                <b (click)="navigateSignUp()" class="highlight pointer"> Create one</b></span>
+        </div>
+    </div>
+</div>
