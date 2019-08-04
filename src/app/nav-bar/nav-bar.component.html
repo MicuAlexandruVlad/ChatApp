@@ -1,0 +1,25 @@
+<div class="fixed-top color">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a (click)="navigateHome()" class="navbar-brand" style="color: white; cursor: pointer;"><b>ChatApp</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a (click)="navigateHome()" class="nav-link">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="navigateLogin()" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="navigateSignUp()" class="nav-link">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<router-outlet></router-outlet>
