@@ -12,15 +12,17 @@
         </div>
 
         <div class="input-field input-spacing-sm">
-            <input [(ngModel)]="email" style="font-size: 20px;" id="pass" type="password" class="validate input-font">
+            <input [(ngModel)]="password" style="font-size: 20px;" id="pass" type="password" class="validate input-font">
             <label for="pass">Password</label>
         </div>
 
         <div class="input-field input-spacing-sm">
-            <input [(ngModel)]="email" style="font-size: 20px;" id="repeat-pass" type="password" class="validate input-font">
+            <input [(ngModel)]="repeatPassword" style="font-size: 20px;" id="repeat-pass" type="password" class="validate input-font">
             <label for="repeat-pass">Repeat password</label>
         </div>
 
-        <button class="btn-sign-up">Sign Up</button>
+        <p [ngStyle]="{'visibility': passwordsNotMatching}" class="error">{{ errorMessage }}</p>
+
+        <button (click)="registerUser()" class="btn-sign-up">Sign Up</button>
     </div>
 </div>

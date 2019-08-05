@@ -21,9 +21,13 @@
             <span class="forgot-pass">Forgot password ?</span>
         </div>
 
+        <div class="error">
+            <p [ngStyle]="{'visibility': errorVisibility}">{{ errorMessage }}</p>
+        </div>
+
         <div class="bottom-div">
             <span class="font-standard">Don't have an account ? 
-                <b (click)="navigateSignUp()" class="highlight pointer"> Create one</b></span>
+                <b (click)="navigateSignUp()" class="highlight pointer"> Sign Up</b></span>
         </div>
     </div>
 </div>
