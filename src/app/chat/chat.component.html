@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 left-col">
+
+        <div class="row">
+            <div class="user-profile col-md-12">
+                <div class="user-profile-image">
+                    <span><b>{{ firstLetter }}</b></span>
+                </div>
+                <span class="big-user-name"><b>Bjorn Berg</b></span>
+                <img src="../../assets/settings.png" class="settings pointer">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="searchDiv" class="search-holder">
+                    <img class="search-img" src="../../assets/search.png">
+                    <input id="searchInput" class="search-input" type="text" placeholder="Search" spellcheck="false">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div *ngFor="let user of users" class="wrapper">
+                    <div (click)="animateOpacityForId(user.id)" [attr.id]="user.id" class="conversation-user pointer">
+                        <div [attr.id]="user.id + 'indicator'" class="active-indicator">
+                            
+                        </div>
+                        <div class="user-profile-image position-conversation-user-image">
+                            <strong>{{user.firstLetter}}</strong>
+                        </div>
+                        <div class="user-data">
+                            <div class="user-name-message">
+                                <div class="data">
+                                    <span class="user-name conv-user-name"><b>
+                                        {{ user.firstName }} {{ user.lastName }}
+                                    </b></span>
+                                    <span class="timestamp">3h</span>
+                                </div>
+                                <span class="message">Hello there bud. How are you ?</span>
+                            </div>
+                            <div class="unread-messages">
+                                <span><strong>3</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="background-color: azure;" class="col-md-9"></div>
+  </div>
+</div>

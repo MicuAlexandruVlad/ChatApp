@@ -1,21 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Directive, Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import axios from 'axios';
 import * as HttpStatus from 'http-status-codes'
 import { User } from '../shared/User';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit { 
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) {
+    
+  }
+
 
   private apiUrl = 'http://192.168.0.19:3000/';
 
   ngOnInit() {
+    $(document).ready(function() {
+      $("#email").focusin(function() {
+        var emailSeparator = $("#emailSep");
+        emailSeparator.addClass("separator-active");
+      });
+      $("#email").focusout(function() {
+        var emailSeparator = $("#emailSep");
+        emailSeparator.removeClass("separator-active");
+      })
+    });
+    $(document).ready(function() {
+      $("#password").focusin(function() {
+        var emailSeparator = $("#passSep");
+        emailSeparator.addClass("separator-active");
+      });
+      $("#password").focusout(function() {
+        var emailSeparator = $("#passSep");
+        emailSeparator.removeClass("separator-active");
+      })
+    });
   }
 
   email: string;
@@ -48,7 +72,7 @@ export class LoginComponent implements OnInit {
         }
         if (status == HttpStatus.OK) {
           // nav somewhere
-          alert('Authenticated');
+          this.router.navigate(['./chat']);
         }
       })
       .catch(function (error) {

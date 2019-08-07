@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { LoginComponent } from './login/login.component';
     NavBarComponent,
     SignUpComponent,
     LoginComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,6 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent, WelcomeComponent, NavBarComponent, SignUpComponent, LoginComponent]
+  bootstrap: [AppComponent, WelcomeComponent, NavBarComponent, SignUpComponent, LoginComponent, ChatComponent]
 })
 export class AppModule { }

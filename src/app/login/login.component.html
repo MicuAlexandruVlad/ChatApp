@@ -6,14 +6,14 @@
         <p>Welcome to <span class="highlight"><b>ChatApp</b></span></p>
         <p class="small-desc-1">We make it easier for you to connect with others.</p>
 
-        <div class="input-field input-spacing">
-            <input [(ngModel)]="email" style="font-size: 30px;" id="email" type="email" class="validate input-font">
-            <label for="email">Email</label>
+        <div class="input-container">
+            <input (click)="animateBorderEmail()" [(ngModel)]="email" placeholder="Email" id="email" type="email" class="input-style">
+            <div id="emailSep" class="separator transform"></div>
         </div>
 
-        <div class="input-field input-spacing">
-            <input [(ngModel)]="password" style="font-size: 30px;" id="password" type="password" class="validate input-font">
-            <label for="password">Password</label>
+        <div class="input-container">
+            <input (click)="animateBorderPassword()" [(ngModel)]="password" placeholder="Password" id="password" type="password" class="input-style">
+            <div id="passSep" class="separator transform"></div>
         </div>
 
         <div class="login-container">

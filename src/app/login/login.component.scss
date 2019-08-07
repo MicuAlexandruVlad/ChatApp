@@ -15,7 +15,7 @@ $border-radius: 24px;
 }
 
 .column {
-    margin-top: 66px;
+    margin-top: 56px;
     width: 100%;
     display: flex;
     font-size: $font-size;
@@ -53,10 +53,6 @@ $border-radius: 24px;
 .input-spacing {
     margin-top: 3rem;
     font-size: 1.4em;
-}
-
-.input-font {
-    font-size: $font-size-input;
 }
 
 .login-btn {
@@ -125,4 +121,37 @@ $border-radius: 24px;
     font-size: .7em;
     margin-top: 1rem;
     color: red;
+}
+
+.input-container {
+    margin-top: 2rem;
+}
+
+.input-style {
+    font-size: .8em;
+    width: 100%;
+    border: none;
+    transition: .4s ease-out;
+    &:active,
+    &:focus {
+        outline: 0;
+    }
+}
+
+.separator {
+    background-color: $general-color;
+    height: 1px;
+    width: 1px;
+    visibility: hidden;
+}
+
+.separator-active {
+    background-color: $general-color;
+    height: 1px;
+    width: 100%;
+    visibility: visible;
+}
+
+.transform {
+    transition: .4s ease-in-out;
 }

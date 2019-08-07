@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     { path: 'login', component: LoginComponent },
   ]
 },
+  { path: 'chat', component: ChatComponent },
   { path: '**', redirectTo: 'nav' },
 ];
 
